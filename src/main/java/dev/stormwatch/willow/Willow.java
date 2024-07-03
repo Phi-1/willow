@@ -1,5 +1,6 @@
 package dev.stormwatch.willow;
 
+import dev.stormwatch.willow.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -24,6 +25,6 @@ public class Willow implements ModInitializer
 	@Override
 	public void onInitialize()
 	{
-		LOGGER.info("Hello Fabric world!");
+		ModItems.register();
 	}
 }
