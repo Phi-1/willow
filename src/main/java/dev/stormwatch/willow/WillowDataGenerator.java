@@ -1,5 +1,7 @@
 package dev.stormwatch.willow;
 
+import dev.stormwatch.willow.datagen.ModLanguageProvider;
+import dev.stormwatch.willow.datagen.ModModelProvider;
 import dev.stormwatch.willow.datagen.ModRecipeProvider;
 import dev.stormwatch.willow.registry.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -22,6 +24,8 @@ public class WillowDataGenerator implements DataGeneratorEntrypoint
 	{
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModModelProvider::new);
+		pack.addProvider(ModLanguageProvider::new);
 	}
 
 }

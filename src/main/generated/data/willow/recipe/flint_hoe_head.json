@@ -7,11 +7,10 @@
     }
   },
   "pattern": [
-    "ff",
-    "f "
+    "f"
   ],
   "result": {
     "count": 1,
-    "id": "willow:flint_axe_head"
+    "id": "willow:flint_hoe_head"
   }
 }

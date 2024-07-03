@@ -8,10 +8,10 @@
   },
   "pattern": [
     "ff",
-    "f "
+    "ff"
   ],
   "result": {
     "count": 1,
-    "id": "willow:flint_axe_head"
+    "id": "willow:flint_shovel_head"
   }
 }

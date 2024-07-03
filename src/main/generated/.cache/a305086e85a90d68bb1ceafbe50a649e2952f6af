@@ -1,7 +1,23 @@
-// 1.21	2024-07-03T16:24:56.497810229	Willow/Recipes
-1c4c51a0d5453f30b4a13da0324952f1392408fc data/willow/advancement/recipes/tools/flint_axe_head.json
-e997167e92ce71d1dcf0d61501a0f68c63eb2ba7 data/willow/advancement/recipes/tools/tool_handle.json
-6827efc9d9203eb60d81cd95cdb44209df34ef44 data/willow/recipe/wooden_axe.json
-c846954f1ca80fcc80b8b91820fda46053a6a335 data/willow/recipe/tool_handle.json
-e0ffd19fd03c9dc2acb21329468ef5829078f71f data/willow/recipe/flint_axe_head.json
-847b5dbd491465731d1c8a1e3f57087d0b3fc82e data/willow/advancement/recipes/tools/wooden_axe.json
+// 1.21	2024-07-03T20:27:31.8225101	Willow/Recipes
+30bf87b6e575b94acef89d3458280cf857cb169b data\willow\recipe\flint_pickaxe_head.json
+cc27568a757acd2bf007017e7cd37641d4ef945e data\willow\recipe\flint_shovel_head.json
+a0349e228d65ccbbdf81aaf88425c6cbdaddd53c data\willow\recipe\flint_blade.json
+b32be50d48ab08980d2b5af439bdf235f6bcb48e data\willow\advancement\recipes\tools\flint_hoe_head.json
+20b663aed468595748fe4d55ad961e35f78a6d72 data\willow\advancement\recipes\tools\wooden_hoe.json
+e997167e92ce71d1dcf0d61501a0f68c63eb2ba7 data\willow\advancement\recipes\tools\tool_handle.json
+8ea301e6ad28dbd1ca7f4d8d8f61bacb340f861c data\willow\recipe\flint_hoe_head.json
+9a94ec5f55e025cbc5473f83c0b0842ce4494ce4 data\willow\recipe\wooden_shovel.json
+a0b1393f63617d1358ebcd665e31dedcfeff07a7 data\willow\advancement\recipes\tools\flint_blade.json
+6bc7728046bde0235d89e3b0f8ed931bd1426c30 data\willow\advancement\recipes\tools\flint_pickaxe_head.json
+4333bfc9ad75f0d3c58ab01418ed950c734344f9 data\willow\recipe\wooden_sword.json
+7d3218a8619fecb4eae609e0f92e78152fed5e8e data\willow\recipe\flint_axe_head.json
+c846954f1ca80fcc80b8b91820fda46053a6a335 data\willow\recipe\tool_handle.json
+8ece85989ca2a55cd2bee36b1a1f83c13b99296b data\willow\recipe\wooden_pickaxe.json
+f90e7ba8099b520032b0bc8b0b5f2a5a7e1b7333 data\willow\advancement\recipes\tools\wooden_pickaxe.json
+847b5dbd491465731d1c8a1e3f57087d0b3fc82e data\willow\advancement\recipes\tools\wooden_axe.json
+b0f2fdbb0cb588e6649cefdf469061d71fa3a646 data\willow\advancement\recipes\tools\wooden_shovel.json
+1c4c51a0d5453f30b4a13da0324952f1392408fc data\willow\advancement\recipes\tools\flint_axe_head.json
+6827efc9d9203eb60d81cd95cdb44209df34ef44 data\willow\recipe\wooden_axe.json
+e30aa7a1e1e6464b970e8504bdcd4da7e66c4f6e data\willow\advancement\recipes\tools\flint_shovel_head.json
+b585cc56bbcf91e91c1568f0d699e6eb05e65f7b data\willow\recipe\wooden_hoe.json
+d899ea5c62693edbbc81bc222884ae9314800154 data\willow\advancement\recipes\tools\wooden_sword.json
