@@ -14,9 +14,6 @@ import org.slf4j.LoggerFactory;
 // TODO: make leaves drop sticks sometimes, and make mining leaves give woodcutting xp
 // TODO: warped fungus should also give (more?) xp
 
-// TODO: replace lang for wooden tools with flint tools
-// TODO: replace textures for wooden tools with flint tools
-// TODO: how the heck do you make a crafting table to make flint tools?
 public class Willow implements ModInitializer
 {
 	public static final String MOD_ID = "willow";

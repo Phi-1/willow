@@ -1,6 +1,7 @@
 package dev.stormwatch.willow.registry;
 
 import dev.stormwatch.willow.Willow;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -34,9 +35,20 @@ public class ModItems
 			Identifier.of(Willow.MOD_ID, "flint_hoe_head"),
 			new Item(new Item.Settings()));
 
-	/**
-	 * Dummy method, needs to be called to make Java aware of this class
-	 */
-	public static void register() {}
+	// Fuel Items
+	public static final Item KINDLING = Registry.register(
+			Registries.ITEM,
+			Identifier.of(Willow.MOD_ID, "kindling"),
+			new Item(new Item.Settings()));
 
+
+	public static void register()
+	{
+	}
+
+	private static void registerFuelItems()
+	{
+		// Burning time in ticks is number of items it can burn times 200
+		FuelRegistry.INSTANCE.add(KINDLING, 6 * 200);
+	}
 }

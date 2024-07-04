@@ -23,6 +23,7 @@ public class ModRecipeProvider extends FabricRecipeProvider
 	@Override
 	public void generate(RecipeExporter exporter)
 	{
+		// Tools
 		ModRecipes.TOOL_HANDLE.offerTo(exporter);
 		ModRecipes.FLINT_AXE_HEAD.offerTo(exporter);
 		ModRecipes.FLINT_PICKAXE_HEAD.offerTo(exporter);
@@ -34,6 +35,9 @@ public class ModRecipeProvider extends FabricRecipeProvider
 		ModRecipes.FLINT_SHOVEL.offerTo(exporter);
 		ModRecipes.FLINT_HOE.offerTo(exporter);
 		ModRecipes.FLINT_KNIFE.offerTo(exporter);
+
+		// Fuel
+		ModRecipes.KINDLING.offerTo(exporter);
 	}
 
 	private static class ModRecipes
@@ -96,5 +100,9 @@ public class ModRecipeProvider extends FabricRecipeProvider
 				.input(ModItems.FLINT_SHOVEL_HEAD)
 				.input(ModItems.TOOL_HANDLE)
 				.criterion(FabricRecipeProvider.hasItem(ModItems.FLINT_SHOVEL_HEAD), FabricRecipeProvider.conditionsFromItem(ModItems.FLINT_SHOVEL_HEAD));
+
+		private static final ShapelessRecipeJsonBuilder KINDLING = ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.KINDLING)
+				.input(Items.STICK, 9)
+				.criterion(FabricRecipeProvider.hasItem(Items.STICK), FabricRecipeProvider.conditionsFromItem(Items.STICK));
 	}
 }
