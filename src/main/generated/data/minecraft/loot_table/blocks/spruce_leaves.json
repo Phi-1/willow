@@ -5,15 +5,11 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "condition": "minecraft:survives_explosion"
+          "chance": 0.1,
+          "condition": "minecraft:random_chance"
         }
       ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:stick"
-        }
-      ],
+      "entries": [],
       "rolls": 1.0
     }
   ]
