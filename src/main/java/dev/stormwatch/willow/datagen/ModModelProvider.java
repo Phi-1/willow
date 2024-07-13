@@ -22,11 +22,15 @@ public class ModModelProvider extends FabricModelProvider
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator)
     {
+        // Tools
         itemModelGenerator.register(ModItems.TOOL_HANDLE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLINT_AXE_HEAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLINT_PICKAXE_HEAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLINT_SHOVEL_HEAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLINT_HOE_HEAD, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLINT_BLADE, Models.GENERATED);
+
+        // Fuel
+        itemModelGenerator.register(ModItems.KINDLING, Models.GENERATED);
     }
 }

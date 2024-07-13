@@ -1,7 +1,8 @@
-// 1.21	2024-07-03T20:27:31.8245096	Willow/Model Definitions
-eb3b3985ecd1b58d098500b58b265effef925cb7 assets\willow\models\item\flint_shovel_head.json
-c95236066fb5bc327f14d402703e71d5fd21fb62 assets\willow\models\item\flint_blade.json
-704a0084f338efa04bb29bf81b2ccad4dfa026ff assets\willow\models\item\flint_hoe_head.json
-5ca69418e75f4259ae3c3e0a43b05174322c4f24 assets\willow\models\item\tool_handle.json
-92fdec645175600871ec3a1b4c0e731736dc79e4 assets\willow\models\item\flint_axe_head.json
-e9e17b0e9f7e1b978eea47ebc7cc80aff99d5c39 assets\willow\models\item\flint_pickaxe_head.json
+// 1.21	2024-07-06T13:20:31.38139631	Willow/Model Definitions
+c95236066fb5bc327f14d402703e71d5fd21fb62 assets/willow/models/item/flint_blade.json
+eb3b3985ecd1b58d098500b58b265effef925cb7 assets/willow/models/item/flint_shovel_head.json
+92fdec645175600871ec3a1b4c0e731736dc79e4 assets/willow/models/item/flint_axe_head.json
+f83a496eff60524f5c8b08a08639b6f2f91145c5 assets/willow/models/item/kindling.json
+704a0084f338efa04bb29bf81b2ccad4dfa026ff assets/willow/models/item/flint_hoe_head.json
+5ca69418e75f4259ae3c3e0a43b05174322c4f24 assets/willow/models/item/tool_handle.json
+e9e17b0e9f7e1b978eea47ebc7cc80aff99d5c39 assets/willow/models/item/flint_pickaxe_head.json

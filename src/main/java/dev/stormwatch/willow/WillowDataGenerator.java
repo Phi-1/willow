@@ -1,6 +1,7 @@
 package dev.stormwatch.willow;
 
 import dev.stormwatch.willow.datagen.ModLanguageProvider;
+import dev.stormwatch.willow.datagen.ModLootTableProvider;
 import dev.stormwatch.willow.datagen.ModModelProvider;
 import dev.stormwatch.willow.datagen.ModRecipeProvider;
 import dev.stormwatch.willow.registry.ModItems;
@@ -26,6 +27,7 @@ public class WillowDataGenerator implements DataGeneratorEntrypoint
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModModelProvider::new);
 		pack.addProvider(ModLanguageProvider::new);
+		pack.addProvider(ModLootTableProvider.Block::new);
 	}
 
 }

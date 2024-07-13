@@ -23,11 +23,15 @@ public class ModLanguageProvider extends FabricLanguageProvider
 
     public void addItemTranslations(TranslationBuilder builder)
     {
+        // Tools
         builder.add(ModItems.TOOL_HANDLE, "Tool Handle");
         builder.add(ModItems.FLINT_AXE_HEAD, "Flint Axe Head");
         builder.add(ModItems.FLINT_PICKAXE_HEAD, "Flint Pickaxe Head");
         builder.add(ModItems.FLINT_SHOVEL_HEAD, "Flint Shovel Head");
         builder.add(ModItems.FLINT_HOE_HEAD, "Flint Hoe Head");
         builder.add(ModItems.FLINT_BLADE, "Flint Blade");
+
+        // Fuel
+        builder.add(ModItems.KINDLING, "Kindling");
     }
 }
