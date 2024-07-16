@@ -1,19 +1,27 @@
 package dev.stormwatch.willow.state.player;
 
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.server.network.ServerPlayerEntity;
 
 public class PlayerStateHolder
 {
-    private final PlayerSkillLevelState playerSkillLevelState;
+    private final PlayerProfessionState playerProfessionState;
+    private final ServerPlayerEntity player;
 
-    public PlayerStateHolder()
+    public PlayerStateHolder(ServerPlayerEntity player)
     {
-        this(new PlayerSkillLevelState());
+        this(player, new PlayerProfessionState(player));
     }
 
-    public PlayerStateHolder(PlayerSkillLevelState playerSkillLevelState)
+    public PlayerStateHolder(ServerPlayerEntity player, PlayerProfessionState playerProfessionState)
     {
-        this.playerSkillLevelState = playerSkillLevelState;
+        this.playerProfessionState = playerProfessionState;
+        this.player = player;
+    }
+
+    public PlayerProfessionState getProfessionState()
+    {
+        return this.playerProfessionState;
     }
 
     public NbtCompound serialize()

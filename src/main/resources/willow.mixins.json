@@ -3,7 +3,8 @@
   "package": "dev.stormwatch.willow.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "BlocksMixin"
+    "BlocksMixin",
+    "AxeItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

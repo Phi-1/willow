@@ -5,6 +5,7 @@ import dev.stormwatch.willow.state.player.PlayerStateHolder;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.PersistentState;
 import net.minecraft.world.PersistentStateManager;
 import net.minecraft.world.World;
@@ -40,12 +41,12 @@ public class ModStateManager extends PersistentState
         return modStateManager;
     }
 
-    public PlayerStateHolder getOrCreatePlayerState(UUID playerUUID)
+    public PlayerStateHolder getOrCreatePlayerState(ServerPlayerEntity player)
     {
-        PlayerStateHolder playerState = this.playerStateMap.getOrDefault(playerUUID, new PlayerStateHolder());
-        if (!this.playerStateMap.containsKey(playerUUID))
+        PlayerStateHolder playerState = this.playerStateMap.getOrDefault(player.getUuid(), new PlayerStateHolder(player));
+        if (!this.playerStateMap.containsKey(player.getUuid()))
         {
-            this.playerStateMap.put(playerUUID, playerState);
+            this.playerStateMap.put(player.getUuid(), playerState);
         }
         return playerState;
     }

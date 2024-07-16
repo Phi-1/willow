@@ -1,8 +1,15 @@
 package dev.stormwatch.willow;
 
 import dev.stormwatch.willow.registry.ModItems;
+import dev.stormwatch.willow.registry.ModNetworking;
+import dev.stormwatch.willow.state.ModStateManager;
+import dev.stormwatch.willow.state.player.PlayerProfessionState;
+import dev.stormwatch.willow.state.player.PlayerStateHolder;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayerEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 // TODO: lock tool tiers behind skill levels
@@ -23,5 +30,14 @@ public class Willow implements ModInitializer
 	public void onInitialize()
 	{
 		ModItems.register();
+		ModNetworking.registerCustomPayloadTypes();
+		PlayerBlockBreakEvents.AFTER.register(((world, player, pos, state, blockEntity) ->
+		{
+			if (world.isClient()) return;
+			MinecraftServer server = world.getServer();
+			ModStateManager serverState = ModStateManager.getState(server);
+			PlayerProfessionState professionState = serverState.getOrCreatePlayerState((ServerPlayerEntity) player).getProfessionState();
+			professionState.increaseProfessionXP(PlayerProfessionState.Profession.FARMING, 3);
+		}));
 	}
 }
