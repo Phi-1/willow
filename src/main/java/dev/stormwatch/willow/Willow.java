@@ -1,10 +1,12 @@
 package dev.stormwatch.willow;
 
+import dev.stormwatch.willow.events.ProfessionEvents;
 import dev.stormwatch.willow.registry.ModItems;
 import dev.stormwatch.willow.registry.ModNetworking;
 import dev.stormwatch.willow.state.ModStateManager;
 import dev.stormwatch.willow.state.player.PlayerProfessionState;
 import dev.stormwatch.willow.state.player.PlayerStateHolder;
+import dev.stormwatch.willow.util.Profession;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
@@ -20,6 +22,7 @@ import org.slf4j.LoggerFactory;
 
 // TODO: make leaves drop sticks sometimes, and make mining leaves give woodcutting xp
 // TODO: warped fungus should also give (more?) xp
+// TODO: mushroom stems give woodcutting
 
 public class Willow implements ModInitializer
 {
@@ -31,13 +34,25 @@ public class Willow implements ModInitializer
 	{
 		ModItems.register();
 		ModNetworking.registerCustomPayloadTypes();
+
+		registerEventHandlers();
+		testProfessionSyncing();
+	}
+
+	private void registerEventHandlers()
+	{
+		ProfessionEvents.registerEventHandlers();
+	}
+
+	private void testProfessionSyncing()
+	{
 		PlayerBlockBreakEvents.AFTER.register(((world, player, pos, state, blockEntity) ->
 		{
 			if (world.isClient()) return;
 			MinecraftServer server = world.getServer();
 			ModStateManager serverState = ModStateManager.getState(server);
 			PlayerProfessionState professionState = serverState.getOrCreatePlayerState((ServerPlayerEntity) player).getProfessionState();
-			professionState.increaseProfessionXP(PlayerProfessionState.Profession.FARMING, 3);
+			professionState.increaseProfessionXP(Profession.FARMING, 3);
 		}));
 	}
 }

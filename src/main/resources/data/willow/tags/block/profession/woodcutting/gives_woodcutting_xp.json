@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "#willow:profession/woodcutting/woodcutting_tier_0",
+        "#willow:profession/woodcutting/woodcutting_tier_1",
+        "#willow:profession/woodcutting/woodcutting_tier_2",
+        "#willow:profession/woodcutting/woodcutting_tier_3",
+        "#willow:profession/woodcutting/woodcutting_tier_4"
+    ]
+}

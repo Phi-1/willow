@@ -4,7 +4,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "BlocksMixin",
-    "AxeItemMixin"
+    "AxeItemMixin",
+    "FireworkRocketItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

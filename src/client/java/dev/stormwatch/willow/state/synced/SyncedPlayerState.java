@@ -15,7 +15,6 @@ public class SyncedPlayerState
             context.client().execute(() ->
             {
                 // TODO
-                context.player().sendMessage(Text.literal("Profession XP received"));
             });
         });
     }

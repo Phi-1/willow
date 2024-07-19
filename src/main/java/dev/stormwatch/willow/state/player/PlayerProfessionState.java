@@ -1,12 +1,10 @@
 package dev.stormwatch.willow.state.player;
 
 import dev.stormwatch.willow.Willow;
-import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
+import dev.stormwatch.willow.util.Profession;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
-import net.fabricmc.fabric.impl.networking.PayloadTypeRegistryImpl;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
-import net.minecraft.network.PacketByteBuf;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
 import net.minecraft.network.codec.PacketCodecs;
@@ -47,6 +45,11 @@ public class PlayerProfessionState
         this.syncToClient();
     }
 
+    public int getProfessionXP(Profession profession)
+    {
+        return this.professionXP.getOrDefault(profession, 0);
+    }
+
     private void syncToClient()
     {
         ProfessionStatePayload data = new ProfessionStatePayload(
@@ -79,12 +82,4 @@ public class PlayerProfessionState
         }
     }
 
-    public enum Profession
-    {
-        WOODCUTTING,
-        MINING,
-        EXCAVATING,
-        FARMING,
-        FIGHTING
-    }
 }

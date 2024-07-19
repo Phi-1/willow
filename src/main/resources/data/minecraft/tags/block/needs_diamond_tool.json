@@ -1,7 +1,7 @@
 {
-  "replace": false,
-  "values": [
-    "minecraft:stone",
-    "#minecraft:oak_logs"
-  ]
+    "replace": false,
+    "values": [
+        "#willow:profession/woodcutting/woodcutting_tier_3",
+        "#willow:profession/woodcutting/woodcutting_tier_4"
+    ]
 }
