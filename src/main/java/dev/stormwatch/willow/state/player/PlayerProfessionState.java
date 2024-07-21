@@ -45,6 +45,12 @@ public class PlayerProfessionState
         this.syncToClient();
     }
 
+    public void setProfessionXP(Profession profession, int xp)
+    {
+        this.professionXP.put(profession, xp);
+        this.syncToClient();
+    }
+
     public int getProfessionXP(Profession profession)
     {
         return this.professionXP.getOrDefault(profession, 0);

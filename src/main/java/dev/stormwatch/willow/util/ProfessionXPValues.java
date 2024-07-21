@@ -10,6 +10,7 @@ import java.util.Optional;
 
 public class ProfessionXPValues
 {
+
     // TODO: values
     private static final ImmutableMap<TagKey<Block>, Integer> WOODCUTTING_XP_VALUES = ImmutableMap.<TagKey<Block>, Integer>builder()
             .put(ModTags.BlockTags.WOODCUTTING_TIER_0, 1)

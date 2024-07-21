@@ -1,6 +1,5 @@
 package dev.stormwatch.willow.events;
 
-import com.google.common.collect.ImmutableMap;
 import dev.stormwatch.willow.registry.ModTags;
 import dev.stormwatch.willow.state.ModStateManager;
 import dev.stormwatch.willow.state.player.PlayerProfessionState;
